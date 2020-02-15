@@ -1,2 +1,2 @@
 # Test-automation
-practice with different types of sowtware testing 
+practice with a different types of sowtware testing 
