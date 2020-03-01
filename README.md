@@ -1,2 +1,2 @@
 # Test-automation
-practice with a different types of sowtware testing 
+practice with a different types of software testing.
