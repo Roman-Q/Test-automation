@@ -56,7 +56,7 @@ public class MailRuPage extends Page implements Mail {
     */
     public MailRuPage registration(Account account) {
         LOG.debug("Регистрация почты");
-        /*driver.get("https://e.mail.ru/signup?from=main&rf=mail.ru");
+        driver.get("https://e.mail.ru/signup?from=main&rf=mail.ru");
         driver.manage().window().maximize();
         driver.findElement(By.id("x_9e01d53a0ae1946f")).clear();
         driver.findElement(By.id("x_9e01d53a0ae1946f")).sendKeys("sdfsdfs");
@@ -65,9 +65,7 @@ public class MailRuPage extends Page implements Mail {
         driver.findElement(By.id("man1")).click();*/
         return this;
     }
-
-    инпут
-    /*
+   
     Выход
     @param user - {@link UserAccount}
     @return {@link MyProfilePage}
