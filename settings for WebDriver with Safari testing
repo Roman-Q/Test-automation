@@ -1,0 +1,10 @@
+ @Before
+    public void setUp() throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("device", "iPhone Simulator");
+        capabilities.setCapability("version", "6.1");
+        capabilities.setCapability("app", "safari");
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+                capabilities);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
