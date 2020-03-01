@@ -1,0 +1,24 @@
+import com.codeborne.selenide.WebdriverRunner;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import page.MainPage;
+
+import static com.codeborne.selenide.Selenide.close;
+import static utils.MyDriverManager.initChromeDriver;
+
+public class FooterTest {
+  
+  @BeforeClass //методы используемые перед тестами
+  public void setUp() {
+    WebdriverRunner.setWebDriver(initChromeDriver());
+  }
+  
+  @Test
+  public void checkFooter() {
+    new MainPage().openMainPage('https://...')
+      .checkFooterVisible();
+      
+  @AfterClass //методы используемые после тестов, выполнятся даже если тесты выбросят ошибку
+  public void tearDown() { close(); }
+}
