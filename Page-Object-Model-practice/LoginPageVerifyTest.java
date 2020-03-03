@@ -2,7 +2,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
  
-import LoginPage;
+import LoginPage; 
  
 public class VerifyLoginPage {
  
@@ -11,11 +11,11 @@ public class VerifyLoginPage {
   
     WebDriver driver = new FirefoxDriver();
     
-    driver.manage().window().maximize();
+    driver.manage().window().maximize(); //maximize the browser's window to view all the web application's elements during testing
     
     driver.get("http://localhost/login");
     
-    LoginPage login = new LoginPage(driver);
+    LoginPage login = new LoginPage(driver); //consctructor to create new instance of imported LoginPage class
     
     login.clickOnLoginButton();
     
