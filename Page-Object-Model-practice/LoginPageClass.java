@@ -36,7 +36,7 @@ public class LoginPage {
   }
  
   public void clickOnLoginButton() {
-    driver.findElement(loginButton).click();
+    driver.findElement(loginButton).click(); 
   }
 
 }
