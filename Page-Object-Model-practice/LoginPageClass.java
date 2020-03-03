@@ -21,7 +21,7 @@ public class LoginPage {
     this.driver = driver;
   }
   
-  public void loginToPanel(String userid, String pass) {
+  public void loginToPanel(String userid, String pass) { //parameters for different data testing
     driver.findElement(username).sendKeys(userid);
     driver.findElement(password).sendKeys(pass);
     driver.findElement(loginButton).click();
