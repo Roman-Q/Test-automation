@@ -17,7 +17,7 @@ public class VerifyLoginPage {
     
     LoginPage login = new LoginPage(driver); //consctructor to create new instance of imported LoginPage class
     
-    login.clickOnLoginButton();
+    login.loginToPanel('admin', 'qwerty1234'); //here we can use different test data
     
     driver.quit();
   
