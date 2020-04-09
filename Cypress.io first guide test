@@ -1,6 +1,6 @@
 describe('My first test', function() {
   it('Visit the kitchen', function() {
-    cy.visit('https://example.cypress.io');//cy - is a global object, which includes all of the commands(methods)
+    cy.visit('https://example.cypress.io');//cy(cypress) - is a global object, which includes all of the commands(methods)
   
     cy.pause(); //nice instrument for debugging 
 
