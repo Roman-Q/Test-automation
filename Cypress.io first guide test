@@ -1,0 +1,16 @@
+describe('My first test', function() {
+  it('Visit the kitchen', function() {
+    cy.visit('https://example.cypress.io');//cy - is a global object, which includes all of the commands
+  
+    cy.pause(); //nice instrument for debugging
+
+    cy.contains('type').click();
+    
+    cy.url()
+      .should('include', '/commands/actions');
+
+    cy.get('.action-email')
+      .type('fake@email.com')
+      .should('have.value', 'fake@email.com');
+  });
+});
