@@ -1,0 +1,23 @@
+describe('/settings', () => {
+  beforeEach(() => {
+    cy.login() // 'login' is a created Cypress.Command(code is below) which is based on completed entry to homepage 
+    
+    cy.visit('/#/settings')
+  })
+  
+  it('greets with Your Settings', () => {
+    cy.contains('h1', 'Your Settings')
+  })
+})
+
+------------------
+
+We need to be logined in for testing the other pages of app and we don't want to duplicate the code, 
+so we can use the next approach for doing some abstraction and create a command:
+
+Cypress.Commands.add('login', () => {
+  cy.visit('/#/login')
+  cy.get('[data-test=email]').type('user@example.com')
+  cy.get('[data-test=password]').type('invalid{enter}')
+  cy.hash().should('eq', '#/')
+})
